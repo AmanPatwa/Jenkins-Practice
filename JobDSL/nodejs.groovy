@@ -13,6 +13,6 @@ job('NodeJs Example'){
         nodejs('nodejs')
     }
     steps{
-        shell("npm start")
+        shell("npm install")
     }
 }
