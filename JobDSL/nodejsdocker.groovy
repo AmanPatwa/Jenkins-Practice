@@ -12,8 +12,8 @@ job('NodeJs Docker Demo'){
     wrappers{
         nodejs('nodejs')
     }
-    steps(
-        dockerBuildAndPublish{
+    steps{
+        dockerBuildAndPublish {
             repositoryName('wardviaene/docker-nodejs-demo')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
@@ -22,5 +22,5 @@ job('NodeJs Docker Demo'){
             createFingerprints(false)
             skipDecorate()
         }
-    )
+    }
 }
